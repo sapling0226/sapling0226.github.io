@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src='jquery.js'></script>
+<body>
+<div>1</div>
+<div>2</div>
+<div>2</div>
+<script>
+
+    var arr = [1, 2, 3, 4, 5, 6];
+    var div = document.querySelectorAll('div');
+
+
+    /*
+    var div = document.querySelectorAll('div');
+    //139
+    //jq 字符串 数组  dom对象  伪数组 JQ对象  函数 null
+
+
+    //each(arr,callback)
+    //arr可为数组或者对象 for 或者for in
+    //this的指向，指向当前遍历的每个对象
+    //如果返回值是false  那么break
+    //返回原来的数组或者对象
+    function myEach(arr,callback) {
+        var Array = arr.length >= 0;
+        if (Array) {
+            for (var i=0;i<arr.length;i++) {
+                if (callback.call(arr[i],i, arr[i])===false)  break;
+            }
+        }else {
+            for (var k in arr) {
+                if (callback.call(arr[k],k,arr[k])===false) break;
+            }
+        }
+        return arr;
+    }
+
+    var arr = [1, 2, 3, 4, 5, 6];
+    var arr1=myEach(div, function (i, v) {
+        console.log(i+' '+v);
+        console.log(this==v);
+        return false;
+    })
+    console.log(arr1==arr);
+
+
+    //this指向window
+    //返回值为undefined时  不加入数组
+    //返回一个新的数组
+
+    function myMap(arr,callback) {
+        var Array = arr.length >= 0,
+            temp,
+            newArr=[];
+        if (Array) {
+            for (var i=0;i<arr.length;i++) {
+                temp = callback(arr[i], i);
+                if (temp!=null) {
+                    newArr.push(temp);
+                }
+            }
+        }else {
+            for (var k in arr) {
+                temp = callback(arr[k], k);
+                if (temp!=null) newArr.push(temp);
+            }
+        }
+        return newArr;
+    }
+//    var arr2=myMap(div, function (v, i) {
+//        console.log(i+' '+v);
+//        if (i>-1) {
+//            return v;
+//        }
+//    });
+//    console.log(arr2);
+
+
+
+    //153、console.log( 8 | 1 ); 输出值是多少？
+    var num = 15;
+    console.log(num.toString(2));
+
+    parseInt('1111',2)
+    //位运算符 AND &  、 OR |  、  XOR ^
+
+    // |  有1则为1
+    //  1   1    1
+    //  1   0    1
+    //  0   1    1
+    //  0   0    0
+
+    // &  有0则为0
+    // 1   1    1
+    // 0   1    0
+    // 1   0    0
+    // 0   0    0
+
+    //^  只含有一个1则为1
+    //  1   1    0
+    //  1   0    1
+    //  0   1    1
+    //  0   0    0
+
+    //1111
+    //0101*/
+
+</script>
+</body>
+</html>
